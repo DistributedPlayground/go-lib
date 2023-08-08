@@ -1,6 +1,7 @@
 package common
 
 import (
+	"os"
 	"reflect"
 )
 
@@ -40,4 +41,8 @@ func IsNil(i interface{}) bool {
 		return reflect.ValueOf(i).IsNil()
 	}
 	return false
+}
+
+func IsLocalEnv() bool {
+	return os.Getenv("ENV") == "local"
 }
