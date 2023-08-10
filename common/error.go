@@ -16,7 +16,7 @@ func LogError(c echo.Context, err error, handlerMsg string) {
 	lg.Error().Stack().Err(err).Msg(handlerMsg)
 }
 
-func LogStringError(c echo.Context, err error, handlerMsg string) {
+func LogDPError(c echo.Context, err error, handlerMsg string) {
 	type stackTracer interface {
 		StackTrace() errors.StackTrace
 	}
