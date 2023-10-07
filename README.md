@@ -1,7 +1,17 @@
 # Go-Lib
 This repo is responsible for centralizing some core go components into a single library for use by the Distributed Playground projects. It handles errors, logging, validation, loading environment variables, and utility functions.
 
-Please note that it is *not* neccesary to clone this repo in order to run the Distributed Playground project.
+## Usage
+Although it's not necessary to clone this repo to run the Distributed Playground project, `Go-Lib` can be easily integrated into any Go project. Here's an example of how you can import one of it's packages:
+
+```go
+import (
+    "github.com/DistributedPlayground/go-lib/httperror"
+)
+
+// Usage
+return httperror.Internal500(ctx)
+```
 
 # Distributed Playground
 The purpose of this repo is to practice the development of distributed systems
